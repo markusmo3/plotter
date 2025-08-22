@@ -31,6 +31,7 @@ The outermost rectangle is an A4 paper, the inner rectangle is the printable are
 4. Calculate your printable area size from that (for my SV06 that is 190x160)
 5. Update `vpype.toml` and `plot.sh` accordingly
 6. My scripts use z position 7mm as down and 10mm as up, so move your extruder head to 8mm and calibrate your pen apperature with it. (We need that extra 1mm because of the unevenness of the bed)
+7. On the software side you just have to execute `source activate.sh` to create a venv and install the dependencies or activate the venv directly
 
 ### Workflow
 1. Clean if necessary or wanted, play around with `./clean.sh myfile.svg`
