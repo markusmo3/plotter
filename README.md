@@ -2,12 +2,10 @@ Plotting with the SV06
 --------------------------------
 
 ### Preview
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./svgs/icosa-medusa-preview-darkmode.svg">
-  <img alt="Icosa Medusa Pattern" src="./svgs/icosa-medusa-preview.svg" style="width: 300px">
-</picture>
-
-The outermost rectangle is an A4 paper, the inner rectangle is the printable area of 190x160 and then there is the icosa medusa pattern.
+| Resulting images on a wall | After printing | Preview SVG |
+| --- | --- | --- |
+| <img alt="3 Pictures on a wall" src="./docs/finished.jpg" width="300" height="600"> | <img alt="after printing" src="./docs/after_printing.jpg" width="300" height="600"> | <picture><source media="(prefers-color-scheme: dark)" srcset="./svgs/icosa-medusa-preview-darkmode.svg"><img alt="Icosa Medusa Pattern" src="./svgs/icosa-medusa-preview.svg" width="300" height="600"></picture> |
+| These are the results i was able to produce. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The mount and the printable area on an A4 paper can be seen here, but the paper was moved already, it should sit firmly in the top right corner. | The outermost rectangle is an A4 paper, the inner rectangle is the printable area of 190x160 and then there is the icosa medusa pattern. |
 
 ### Hardware
 * SV06
