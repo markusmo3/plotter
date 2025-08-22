@@ -1,0 +1,4 @@
+CairoSVG==2.8.2
+pillow==11.3.0
+vpype==1.14.0
+vpype-gcode==0.13.0

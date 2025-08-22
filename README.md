@@ -1,41 +1,42 @@
-Plotting with the Prusa MK3S+
+Plotting with the SV06
 --------------------------------
 
-![plotting city scape](docs/city.webp)
-
-Printing [Cubic Cityscape #1](https://plotterfiles.com/@reinder/files/6007e7e9-a35b-45d1-b313-adf74bf5977d) with a MUJI gel pen.
-
 ### Hardware
-* Prusa MK3S+
-* [Pen Plotter Attachment](https://www.printables.com/model/63385-pen-plotter-attachment-for-prusa-mk3s) - this is a great design, easy to switch pens, calibration tool for consistent z-height, mount does not interfere with regular printing
+* SV06
+* [Pen Plotter Attachment](https://www.printables.com/model/63385-pen-plotter-attachment-for-prusa-mk3s)
+  * Instead of the E-block holder for MK3s you need: [Mounting Piece for SV06](https://www.printables.com/model/984052-pen-plotter-attachment-for-the-sovol-sv06)
+  * And then you only one way to mount your pens, so *either* narrow, wide or threaded+collet. Optionally you can use the spacer and or the calibrator
+    * The fit is quite tight, be prepared to either sand your inner pieces or print them at 99%
+* 2 screws M3x20 to mount the SV06 mounting piece to the extruder as my screws from the extruder were slightly too short with the mounting piece attached
+* Rubber bands
 
 ### Software
-* Affinity Designer (can probably use Inkscape too)
 * python 3
-* `pip install vpype`
-* `pip install vpype-gcode`
+* [Some awesome designs](https://turtletoy.net/turtle/browse/newest/)
+* (optional) Inkscape, GIMP, Affinity, etc.
 
-### Calibrate
-[Calibrating](docs/calibrating.md)
+### Setup and Calibration
+1. Mount the eblock holder
+2. Put paper to the top right corner of your printbed (you can use both sides of your plate for either a rough or smoother look)
+3. Move your extruder around with a pen attached to find your limits (for my SV06 they are xMin=0, yMin=63, xMax=200, yMax=223)
+4. Calculate your printable area size from that (for my SV06 that is 200x160)
+5. Update `vpype.toml` and `plot.sh` accordingly
+6. My scripts use z position 7mm as down and 10mm as up, so move your extruder head to 8mm and calibrate your pen apperature with it. (We need that extra 1mm because of the unevenness of the bed)
 
 ### Workflow
-1. Layout the SVG
-	1. Open the SVG in Affinity Designer -> select all -> copy
-	2. Affinity Designer -> New -> Print
-	  * width/height: yuor plottable area (e.g. 207 x 172 mm)
-		* units: millimeters
-		* dpi: 96 (vpype assumes 96 dpi)
-	3. Paste the SVG
-	3. If modifying the SVG or have multiple object, group the vector layers together (Layer toolbox -> select all -> right-click Group). vpype will optimize paths within a layer.
-	4. Export -> SVG
-	  * Use DPI: 96 (under More)
-		* Flatten Transforms checked (under More)
-		* Export Text as Curves checked (under More)
-		* Set Viewbox (under More)
-2. `./plot.sh myfile.svg`
-3. Print
-	1. Place paper on smooth sheet
-	2. Secure with magnets, tape or binder clips
-		* Place these on the front, right edge (on the Prusa logo) and on the back left edge
-		* If you are using something short to secure, you can get away with anywhere along top & bottom edges
-	4. Print `myfile.gcode`
+1. Clean if necessary or wanted, play around with `./clean.sh myfile.svg`
+2. Plot it (while fitting to the max size - some border if you want) `./plot.sh myfile.svg --fit`
+3. Check resulting preview for how it would look like on an A4 page `myfile-preview.svg`
+4. Print
+	1. Place paper on rough or smooth side of bed sheet
+	2. Secure with magnets, tape or binder clips. (I put 4 tiny magnets in the corners)
+	3. Do NOT put pen in yet (otherwise the autocalibration of XYZ axes will smear you pen into the middle)
+	4. Start print `myfile.gcode`, print will be paused after calibration
+	5. Now put your pen in and press resume
+
+### Credits
+* I forked the repo from here: https://github.com/brianlow/plotter/tree/main
+* the examples in the `svgs` folder are from turtletoy.
+  * icosa-medusa: https://turtletoy.net/turtle/fda571fea9
+  * cityscape: https://turtletoy.net/turtle/789cce3829
+  * waves: https://turtletoy.net/turtle/a4242cdb2b
