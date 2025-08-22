@@ -1,6 +1,13 @@
 Plotting with the SV06
 --------------------------------
-<img src="./svgs/icosa-medusa-preview.svg" alt="icosa-medusa.svg" style="width:300px; height: auto;">
+
+### Preview
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./svgs/icosa-medusa-preview-darkmode.svg">
+  <img alt="Icosa Medusa Pattern" src="./svgs/icosa-medusa-preview.svg" style="width: 300px">
+</picture>
+
+The outermost rectangle is an A4 paper, the inner rectangle is the printable area of 190x160 and then there is the icosa medusa pattern.
 
 ### Hardware
 * SV06
@@ -19,8 +26,8 @@ Plotting with the SV06
 ### Setup and Calibration
 1. Mount the eblock holder
 2. Put paper to the top right corner of your printbed (you can use both sides of your plate for either a rough or smoother look)
-3. Move your extruder around with a pen attached to find your limits (for my SV06 they are xMin=0, yMin=63, xMax=200, yMax=223)
-4. Calculate your printable area size from that (for my SV06 that is 200x160)
+3. Move your extruder around with a pen attached to find your limits (for my SV06 they are xMin=0, yMin=63, xMax=190, yMax=223)
+4. Calculate your printable area size from that (for my SV06 that is 190x160)
 5. Update `vpype.toml` and `plot.sh` accordingly
 6. My scripts use z position 7mm as down and 10mm as up, so move your extruder head to 8mm and calibrate your pen apperature with it. (We need that extra 1mm because of the unevenness of the bed)
 
