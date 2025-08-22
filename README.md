@@ -1,11 +1,14 @@
 Plotting with the SV06
 --------------------------------
+#### How it looks
+<img alt="after printing" src="./docs/after_printing.jpg" width="300">
 
-### Preview
-| Resulting images on a wall | After printing | Preview SVG |
-| --- | --- | --- |
-| <img alt="3 Pictures on a wall" src="./docs/finished.jpg" width="300" height="600"> | <img alt="after printing" src="./docs/after_printing.jpg" width="300" height="600"> | <picture><source media="(prefers-color-scheme: dark)" srcset="./svgs/icosa-medusa-preview-darkmode.svg"><img alt="Icosa Medusa Pattern" src="./svgs/icosa-medusa-preview.svg" width="300" height="600"></picture> |
-| These are the results i was able to produce. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | The mount and the printable area on an A4 paper can be seen here, but the paper was moved already, it should sit firmly in the top right corner. | The outermost rectangle is an A4 paper, the inner rectangle is the printable area of 190x160 and then there is the icosa medusa pattern. |
+The mount and the printable area on an A4 paper can be seen here, but the paper was moved already, it should sit firmly in the top right corner.
+
+#### Generated preview svg
+<picture><source media="(prefers-color-scheme: dark)" srcset="./svgs/icosa-medusa-preview-darkmode.svg"><img alt="Icosa Medusa Pattern" src="./svgs/icosa-medusa-preview.svg" width="300"></picture>
+
+The outermost rectangle is an A4 paper, the inner rectangle is the printable area of 190x160 and then there is the icosa medusa pattern.
 
 ### Hardware
 * SV06
@@ -46,3 +49,9 @@ Plotting with the SV06
   * icosa-medusa: https://turtletoy.net/turtle/fda571fea9
   * cityscape: https://turtletoy.net/turtle/789cce3829
   * waves: https://turtletoy.net/turtle/a4242cdb2b
+
+
+### Results
+<img alt="3 Pictures on a wall" src="./docs/finished.jpg" width="300">
+
+These are the results i was able to produce.
