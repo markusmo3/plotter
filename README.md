@@ -1,5 +1,6 @@
 Plotting with the SV06
 --------------------------------
+<img src="./svgs/icosa-medusa-preview.svg" alt="icosa-medusa.svg" style="width:300px; height: auto;">
 
 ### Hardware
 * SV06
